@@ -31,7 +31,7 @@
 						<td><?php echo $data->category; ?></td>
 						<td><?php echo $data->description; ?></td>
 						<td><a href="edit.php?id=<?php echo $data->id; ?>">Editar</a></td>
-						<td><a href="eliminar.php?id=<?php echo $data->id; ?>">Eliminar</a></td>
+						<td><a href="delete.php?id=<?php echo $data->id; ?>">Eliminar</a></td>
 					</tr>
 					<?php
 				}
