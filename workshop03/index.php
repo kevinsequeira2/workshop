@@ -30,8 +30,8 @@
 						<td><?php echo $data->id; ?></td>
 						<td><?php echo $data->category; ?></td>
 						<td><?php echo $data->description; ?></td>
-						<td><a href="editar.php?id=<?php echo $dato->id; ?>">Editar</a></td>
-						<td><a href="eliminar.php?id=<?php echo $dato->id; ?>">Eliminar</a></td>
+						<td><a href="edit.php?id=<?php echo $data->id; ?>">Editar</a></td>
+						<td><a href="eliminar.php?id=<?php echo $data->id; ?>">Eliminar</a></td>
 					</tr>
 					<?php
 				}

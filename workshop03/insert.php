@@ -12,7 +12,7 @@
 
 	if ($result === TRUE) {
 		
-		echo "Insert correct";
+		header('Location: index.php');
 
 	}else{
 		echo "Error";
