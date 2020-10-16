@@ -30,21 +30,30 @@ session_start();
 			
 			// Variable $row hold the result of the query
 			$row = mysqli_fetch_assoc($result);
-			
-			// Variable $hash hold the password hash on database
-			$hash = $row['password'];
 
-			if ($_POST['password']) {	
+			if ($user == 'kevin1') {	
 				
 				$_SESSION['loggedin'] = true;
 				$_SESSION['name'] = $row['name'];
 				$_SESSION['start'] = time();
 				$_SESSION['expire'] = $_SESSION['start'] + (1 * 60) ;						
-				echo "Bienvenido <br>";
-				echo " $row[name] $row[lastName]<br>";				
-				echo "<p><a href='index.php'>Logout</a></p></div>";	
+				echo "Bienvenido admin<br>";
+				echo "$row[name] $row[lastName]<br>";	
+				echo "<p><a href='create.php'>create user</a></p>";
+	
+				echo "<p><a href='index.php'>Logout</a></p>";	
 			
-			} else {
+			} 
+			else if($user !== 'kevin1'){
+				$_SESSION['loggedin'] = true;
+				$_SESSION['name'] = $row['name'];
+				$_SESSION['start'] = time();
+				$_SESSION['expire'] = $_SESSION['start'] + (1 * 60) ;						
+				echo "Bienvenido <br>";
+				echo " $row[name] $row[lastName] <br>";				
+				echo "<p><a href='index.php'>Logout</a></p></div>";	
+			}
+			else {
 				echo "<div>User or Password are incorrects!
 				<p><a href='index.php'><strong>Please try again!</strong></a></p></div>";			
 			}	

@@ -11,7 +11,7 @@
 
 		<h2>Login</h2>
 
-		<form action="login.php" method="POST">                           	
+		<form action="login.php" method="post">                           	
 			<div>									
 				<input type="text" name="user" placeholder="user">        
 			</div>							
